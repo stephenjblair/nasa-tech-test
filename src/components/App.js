@@ -1,9 +1,15 @@
 import "../styles/App.css";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello, from App!</p>
+      <img
+        className="logo-main"
+        src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
+        alt="nasa-logo"
+      />
+      <Search />
     </div>
   );
 }
