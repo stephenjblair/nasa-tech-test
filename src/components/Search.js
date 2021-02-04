@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Search.css";
 import getImages from "../requests/getImages";
+
 const Search = () => {
   const [value, setValue] = useState();
 
