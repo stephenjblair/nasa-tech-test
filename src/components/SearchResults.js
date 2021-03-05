@@ -1,16 +1,19 @@
 import React from "react";
+import "../styles/SearchResults.css";
 
-const SearchResults = () => {
-  return (
-    <>
-      <p>Search results</p>
-      <img
-        className="card-image"
-        src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-        alt="space"
-      />
-    </>
-  );
+const SearchResults = ({ results }) => {
+  if (!results.length) {
+    return <p>No results</p>;
+  } else {
+    return (
+      <>
+        <div className="card-container">
+          {results.map((image) => (
+            <img className="card-image" src={image} alt="spaceImage" />
+          ))}
+        </div>
+      </>
+    );
+  }
 };
-
 export default SearchResults;
